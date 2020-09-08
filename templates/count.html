@@ -1,0 +1,23 @@
+<h1>There are {{count}} words in your text:</h1>
+
+<a href="{% url 'home' %}"> Start Again </a>
+<br/>
+<a href="{% url 'about' %}"> About this website </a>
+
+<br/>
+<br/>
+
+{{fulltext}}
+
+<br/>
+<br/>
+
+{% for word, countall in worddict %}
+
+{{word}}
+<br/>
+{{countall}}
+<br/>
+
+
+{% endfor %}
